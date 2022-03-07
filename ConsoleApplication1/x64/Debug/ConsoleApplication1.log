@@ -1,0 +1,8 @@
+﻿  main.c
+C:\Users\m3tpf\source\repos\ConsoleApplication1\ConsoleApplication1\main.c(32,18): warning C4047: 'function': 'int *' differs in levels of indirection from 'int'
+C:\Users\m3tpf\source\repos\ConsoleApplication1\ConsoleApplication1\main.c(32,12): warning C4024: 'function2': different types for formal and actual parameter 1
+C:\Users\m3tpf\source\repos\ConsoleApplication1\ConsoleApplication1\main.c(58,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'int *'
+C:\Users\m3tpf\source\repos\ConsoleApplication1\ConsoleApplication1\main.c(58,9): warning C4313: 'printf': '%d' in format string conflicts with argument 1 of type 'int *'
+C:\Users\m3tpf\source\repos\ConsoleApplication1\ConsoleApplication1\main.c(64,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'int *'
+C:\Users\m3tpf\source\repos\ConsoleApplication1\ConsoleApplication1\main.c(64,9): warning C4313: 'printf': '%d' in format string conflicts with argument 1 of type 'int *'
+  ConsoleApplication1.vcxproj -> C:\Users\m3tpf\source\repos\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe
