@@ -1,68 +1,50 @@
-#define _CRT_SECURE_NO_WARNINGS 
-#include <stdio.h> 
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
 
-/* The following are function declarations.
-They _declare_ that the functions exist
-but they do not _define_ what the functions actually do
-(the definitions appear after the main function).
-By declaring these functions here,
-they may be called in the main before they are defined.
-Note: function1 expects an int type,
-whereas function2 expects a pointer to an int */
+/* function to read number from standard input (keyboard) */ 
+int getNumber();
 
-void function1(int);
-void function2(int*);
+/* function to calculate the sum of two numbers */
+int calculateSum(int, int);
 
-int main()
-{
-	int number = 10;
-	int* numberPtr = &number;
+/* function to display details to the screen */
+void displayDetails(void);
 
-	/* C1. display the contents of number to the screen */
-	printf("C1 Value of number is: %d\n", number);
+int main() {
+	int num1 = 0; /* first number to be entered by user */
+	int num2 = 0; /* second number to be entered by user */
+	int sum = 0; /* stores sum of two numbers */
 
-	/* C2. display the address of variable number to the screen */
-	printf("C2 Address of number is: %p\n", &number);
-
-	/* C3. call function1 */
-	function1(number);
-
-	/* C4. display the contents of number to the screen */
-	printf("C4 Value of number after call to function1 is: %d\n", number);
-
-	/* C5. call function2 */
-	function2(numberPtr);
-
-	/* C6. display the contents of number to the screen */
-	printf("C6 Value of number after call to function2 is: %d\n", number);
-
+	displayDetails();
+	/* prompt for and read first number */
+	printf("Please enter first number : ");
+	num1 = getNumber();
+	/* prompt for and read second number */
+	printf("Please enter second number: ");
+	num2 = getNumber();
+	/* add two numbers together and display to screen */
+	sum = calculateSum(num1, num2);
+	printf("\nSum of %d and %d is: %d\n\n", num1, num2, sum);
 	return 0;
 }
 
-void function1(int number)
-{
-	/* C7. increment number by one */
-	number += 1;
-
-	/* C8. display the contents of number to the screen (should be 11) */
-	printf("C8 Value of number in function1 is: %d\n", number);
-
-	/* C9. display the address of number to the screen */
-	printf("C9 Address of number is: %p\n", &number);
+/* function to read number from standard input (keyboard) */
+int getNumber() {
+	int num;
+	scanf("%d", &num);
+	return num;
 }
 
-void function2(int* numberPtr)
-{
-	/* C10. display the address of number to the screen (should be the same address as you displayed first in main) */
-	printf("C10 Address of number is: %p\n", numberPtr);
-
-	/* C11. display the value that the pointer numberPtr points to */
-	printf("C11 Value of number in function2 is: %d\n", *numberPtr);
-
-	/* C12. increment the value stored in number */
-	*numberPtr += 1;
-
-	/* C13. display the contents of number to the screen */
-	printf("C13 Value of number after increment in function2: %d\n", *numberPtr);
-
+/* function to calculate the sum of two numbers */
+int calculateSum(int number1, int number2) {
+	return number1 + number2;
 }
+
+/* function to display details to the screen */
+void displayDetails(void) {
+	printf("Author : Your Name\n");
+	printf("Stud ID : Your Student Id\n");
+	printf("Email ID : Your Email Id\n");
+	printf("This is my own work as defined by the\n"); 
+	printf("University's Academic Misconduct Policy.\n\n");
+}/* end function displayDetails */
